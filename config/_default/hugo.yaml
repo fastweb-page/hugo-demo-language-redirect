@@ -16,26 +16,3 @@ languages:
     contentDir: content/fr
     languageName: Français
     weight: 3
-
-#
-# Handle netlify redirects on root page (home)
-#
-# 1.) add redirects/headers
-outputs:
-  home:
-    - html
-    - redirects
-
-# 2.) remove .{ext} from text/netlify
-mediaTypes:
-  text/netlify:
-    delimiter: ""
-    suffixes: [""]
-
-# 3.) add output formats for netlify
-outputFormats:
-  redirects:
-    baseName: _redirects
-    isPlainText: true
-    mediatype: text/netlify
-    notAlternative: true
