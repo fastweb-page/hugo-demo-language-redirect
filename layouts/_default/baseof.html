@@ -3,21 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ .Title }} [{{ site.Title }}]</title>
   </head>
   <body>
-    {{ if .IsTranslated }}
-    <nav>
-      <ul>
-        {{ $pageLang := .Page.Lang }}
-        {{ range .AllTranslations }}
-          <li>
-            <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-          </li>
-        {{ end }}
-      </ul>
-    </nav>
-    {{ end }}
-    <hr>
+    <header>
+      {{ if .IsTranslated }}
+      <nav>
+        <ul>
+          {{ $pageLang := .Page.Lang }}
+          {{ range .AllTranslations }}
+            <li>
+              <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+      {{ end }}
+      <hr>
+    </header>
     {{ block "main" . }}{{ end }}
+    <footer>
+      <hr>
+      Repo: <a href="https://github.com/fastweb-page/hugo-demo-language-redirect">https://github.com/fastweb-page/hugo-demo-language-redirect</a>
+    </footer>
   </body>
 </html>
