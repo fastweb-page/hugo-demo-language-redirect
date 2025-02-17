@@ -1,11 +1,10 @@
 # Redirect base URL by language
 # We use HTTP status code 302 because it's dynamic and might change in future requests
-# We use force (!) because Hugo generates an alias in public/index.html tot redirect to the default language when defaultContentLanguageInSubdir is true
+# We use force (!) because Hugo generates the EN home page in public/index.html
 / /de/ 302! Language=de
 / /fr/ 302! Language=fr
-/ /en/ 302!
 
 # Custom 404 error pages
 /de/* /de/404.html 404
 /fr/* /fr/404.html 404
-/* /en/404.html 404
+/* /404.html 404
