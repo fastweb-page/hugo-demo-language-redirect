@@ -4,6 +4,9 @@
 / /de/ 302! Language=de
 / /fr/ 302! Language=fr
 
+# Redirect some old URL paths
+/en/home/ /en/ 301
+
 # Custom 404 error pages
 /de/* /de/404.html 404
 /fr/* /fr/404.html 404
