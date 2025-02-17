@@ -2,7 +2,6 @@ title: Hugo demo language redirect
 
 # Language configuration
 defaultContentLanguage: en
-defaultContentLanguageInSubdir: true # Because the base url gets redirected by language (otherwise switching to EN home would cause issues)
 languages:
   en:
     contentDir: content/en
