@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Hugo
+.envrc
+.hugo_build.lock
+hugo_stats.json
+public
+resources
+
+# FE build
+node_modules
+
+# Local Netlify folder
+.netlify

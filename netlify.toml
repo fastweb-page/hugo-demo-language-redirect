@@ -1,0 +1,11 @@
+[build.environment]
+  GO_VERSION = "1.23.0"
+  HUGO_VERSION = "0.134.0"
+  TZ = "Europe/Berlin"
+
+[build]
+  command = "hugo --minify"
+  publish = "public"
+
+[context.deploy-preview]
+  command = "hugo --minify -b $DEPLOY_PRIME_URL"
